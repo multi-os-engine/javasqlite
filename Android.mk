@@ -31,7 +31,8 @@ ifeq ($(WITH_HOST_DALVIK),true)
     LOCAL_SRC_FILES := $(call all-java-files-under,src/main/java)
     LOCAL_JAVACFLAGS := $(local_javac_flags)
     LOCAL_MODULE_TAGS := optional
-    LOCAL_MODULE := sqlite-jdbc-host
+    LOCAL_BUILD_HOST_DEX := true
+    LOCAL_MODULE := sqlite-jdbc-hostdex
     include $(BUILD_HOST_JAVA_LIBRARY)
 
     include $(CLEAR_VARS)
