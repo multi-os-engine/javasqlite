@@ -420,6 +420,14 @@ public class JDBCPreparedStatement extends JDBCStatement
 	return ret;
     }
 
+  public void closeOnCompletion() throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public boolean isCloseOnCompletion() throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
     public void clearBatch() throws SQLException {
 	if (batch != null) {
 	    batch.clear();

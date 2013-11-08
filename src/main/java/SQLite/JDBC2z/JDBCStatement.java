@@ -314,6 +314,14 @@ public class JDBCStatement implements java.sql.Statement {
 	return false;
     }
 
+  public void closeOnCompletion() throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public boolean isCloseOnCompletion() throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
     public <T> T unwrap(java.lang.Class<T> iface) throws SQLException {
 	throw new SQLException("unsupported");
     }

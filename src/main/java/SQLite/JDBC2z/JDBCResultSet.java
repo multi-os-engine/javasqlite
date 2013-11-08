@@ -1593,6 +1593,14 @@ public class JDBCResultSet implements java.sql.ResultSet {
 	updateNClob(col, x);
     }
 
+  public <T> T getObject(int columnIndex, Class<T> type) throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public <T> T getObject(String columnLabel, Class<T> type) throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
     public <T> T unwrap(java.lang.Class<T> iface) throws SQLException {
 	throw new SQLException("unsupported");
     }

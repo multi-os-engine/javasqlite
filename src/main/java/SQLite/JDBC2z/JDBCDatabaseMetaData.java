@@ -1677,6 +1677,14 @@ public class JDBCDatabaseMetaData implements DatabaseMetaData {
 	throw new SQLException("unsupported");
     }
 
+  public ResultSet getPseudoColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern) throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public boolean generatedKeyAlwaysReturned() throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
     public <T> T unwrap(java.lang.Class<T> iface) throws SQLException {
 	throw new SQLException("unsupported");
     }

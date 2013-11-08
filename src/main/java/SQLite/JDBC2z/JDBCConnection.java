@@ -2,6 +2,7 @@ package SQLite.JDBC2z;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.Executor;
 
 public class JDBCConnection
     implements java.sql.Connection, SQLite.BusyHandler {
@@ -507,6 +508,26 @@ public class JDBCConnection
 	throws SQLException {
 	throw new SQLFeatureNotSupportedException();
     }
+
+  public void setSchema(String schema) throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public String getSchema() throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public void abort(Executor executor) throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException {
+    throw new SQLException("unsupported");
+  }
+
+  public int getNetworkTimeout() throws SQLException {
+    throw new SQLException("unsupported");
+  }
 
     public <T> T unwrap(java.lang.Class<T> iface) throws SQLException {
 	throw new SQLException("unsupported");
