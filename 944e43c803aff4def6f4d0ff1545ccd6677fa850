@@ -1,0 +1,7 @@
+Code-Review+2: Brian Carlstrom <bdc@google.com>
+Verified+1: Narayan Kamath <narayan@google.com>
+Submitted-by: Narayan Kamath <narayan@google.com>
+Submitted-at: Tue, 26 Nov 2013 16:23:35 +0000
+Reviewed-on: https://android-review.googlesource.com/70830
+Project: platform/external/javasqlite
+Branch: refs/heads/master
