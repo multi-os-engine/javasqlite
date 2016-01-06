@@ -2,6 +2,10 @@
 
 LOCAL_PATH := $(call my-dir)
 
+sqlite_jdbc_src_files := src/main/native/sqlite_jni.c
+sqlite_jdbc_local_c_includes := external/sqlite/dist
+sqlite_cflags := -Wno-unused-parameter
+
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := $(call all-java-files-under,src/main/java)
 LOCAL_NO_STANDARD_LIBRARIES := true
@@ -10,12 +14,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := sqlite-jdbc
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
-sqlite_jdbc_src_files := \
-    src/main/native/sqlite_jni.c
-sqlite_jdbc_local_c_includes := \
-    external/sqlite/dist
-
 include $(CLEAR_VARS)
+LOCAL_CFLAGS := $(sqlite_cflags)
 LOCAL_SRC_FILES := $(sqlite_jdbc_src_files)
 LOCAL_C_INCLUDES += $(sqlite_jdbc_local_c_includes)
 LOCAL_SHARED_LIBRARIES += libsqlite
@@ -33,6 +33,7 @@ include $(BUILD_HOST_DALVIK_STATIC_JAVA_LIBRARY)
 endif  # HOST_OS == linux.
 
 include $(CLEAR_VARS)
+LOCAL_CFLAGS := $(sqlite_cflags)
 LOCAL_SRC_FILES := $(sqlite_jdbc_src_files)
 LOCAL_C_INCLUDES += $(sqlite_jdbc_local_c_includes)
 LOCAL_SHARED_LIBRARIES += libsqlite
