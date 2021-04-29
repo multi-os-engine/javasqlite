@@ -529,6 +529,7 @@ public class Shell implements Callback {
 	}
     }
 
+/*
     public static void main(String args[]) {
 	String key = null;
 	Shell s = new Shell(System.out, System.err);
@@ -599,6 +600,7 @@ public class Shell implements Callback {
 	} catch (Exception ee) {
 	}
     }
+*/
 }
 
 /**
