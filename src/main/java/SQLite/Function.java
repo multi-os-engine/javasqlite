@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Callback interface for SQLite's user defined functions.
  * Each callback method receives a
@@ -37,6 +39,7 @@ public interface Function {
      * @param args String array of arguments
      */
 
+    @JNI
     public void function(FunctionContext fc, String args[]);
 
     /**
@@ -46,6 +49,7 @@ public interface Function {
      * @param args String array of arguments
      */
 
+    @JNI
     public void step(FunctionContext fc, String args[]);
 
     /**
@@ -54,6 +58,7 @@ public interface Function {
      * @param fc function's context for reporting result
      */
 
+    @JNI
     public void last_step(FunctionContext fc);
 
 }

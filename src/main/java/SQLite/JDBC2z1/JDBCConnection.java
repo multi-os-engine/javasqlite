@@ -1,5 +1,7 @@
 package SQLite.JDBC2z1;
 
+import org.moe.svm.anns.Reflection;
+
 import java.sql.Array;
 import java.sql.Blob;
 import java.sql.CallableStatement;
@@ -158,6 +160,7 @@ public class JDBCConnection
 	return dbx;
     }
 
+    @Reflection
     public JDBCConnection(String url, String enc, String pwd, String drep,
 			  String vfs)
 	throws SQLException {

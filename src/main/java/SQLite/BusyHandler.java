@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Callback interface for SQLite's user defined busy handler.
  */
@@ -17,5 +19,6 @@ public interface BusyHandler {
      * @return true if still blocked
      */
 
+    @JNI
     public boolean busy(String table, int count);
 }

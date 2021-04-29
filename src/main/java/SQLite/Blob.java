@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -282,6 +284,7 @@ public class Blob {
      * Internal handle for the SQLite3 blob.
      */
 
+    @JNI
     private long handle = 0;
 
     /**
@@ -289,6 +292,7 @@ public class Blob {
      * has been opened.
      */
 
+    @JNI
     protected int size = 0;
 
     /**

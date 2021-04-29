@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Main class wrapping an SQLite database.
  */
@@ -10,12 +12,14 @@ public class Database {
      * Internal handle for the native SQLite API.
      */
 
+    @JNI
     protected long handle = 0;
 
     /**
      * Internal last error code for exec() methods.
      */
 
+    @JNI
     protected int error_code = 0;
 
     /**

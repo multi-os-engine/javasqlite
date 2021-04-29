@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Context for execution of SQLite's user defined functions.
  * A reference to an instance of this class is passed to
@@ -8,10 +10,14 @@ package SQLite;
 
 public class FunctionContext {
 
+    @JNI
+    public FunctionContext(){}
+
     /**
      * Internal handle for the native SQLite API.
      */
 
+    @JNI
     private long handle = 0;
 
     /**

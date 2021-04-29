@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Class to represent compiled SQLite VM.
  */
@@ -10,12 +12,14 @@ public class Vm {
      * Internal handle for the compiled SQLite VM.
      */
 
+    @JNI
     private long handle = 0;
 
     /**
      * Internal last error code for compile()/step() methods.
      */
 
+    @JNI
     protected int error_code = 0;
 
     /**

@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Callback interface for SQLite's authorizer function.
  */
@@ -19,6 +21,7 @@ public interface Authorizer {
      * for abort SQL statement with error.
      */
 
+    @JNI
     public int authorize(int what, String arg1, String arg2, String arg3,
 			 String arg4);
 }

@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Class to represent compiled SQLite3 statement.
  *
@@ -15,12 +17,14 @@ public class Stmt {
      * Internal handle for the SQLite3 statement.
      */
 
+    @JNI
     private long handle = 0;
 
     /**
      * Internal last error code for prepare()/step() methods.
      */
 
+    @JNI
     protected int error_code = 0;
 
     /**

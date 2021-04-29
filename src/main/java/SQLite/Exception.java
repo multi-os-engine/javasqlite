@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Class for SQLite related exceptions.
  */
@@ -12,6 +14,7 @@ public class Exception extends java.lang.Exception {
      * @param string error message
      */
 
+    @JNI
     public Exception(String string) {
 	super(string);
     }

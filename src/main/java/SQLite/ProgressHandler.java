@@ -1,5 +1,7 @@
 package SQLite;
 
+import org.moe.svm.anns.JNI;
+
 /**
  * Callback interface for SQLite's user defined progress handler.
  */
@@ -15,5 +17,6 @@ public interface ProgressHandler {
      * @return true to continue, false else
      */
 
+    @JNI
     public boolean progress();
 }
