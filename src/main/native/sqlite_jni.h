@@ -17,6 +17,14 @@ JNIEXPORT void JNICALL Java_SQLite_Database__1open
 
 /*
  * Class:     SQLite_Database
+ * Method:    _open4
+ * Signature: (Ljava/lang/String;ILjava/lang/String;Z)V
+ */
+JNIEXPORT void JNICALL Java_SQLite_Database__1open4
+  (JNIEnv *, jobject, jstring, jint, jstring, jboolean);
+
+/*
+ * Class:     SQLite_Database
  * Method:    _open_aux_file
  * Signature: (Ljava/lang/String;)V
  */
@@ -185,6 +193,38 @@ JNIEXPORT void JNICALL Java_SQLite_Database__1trace
 
 /*
  * Class:     SQLite_Database
+ * Method:    _backup
+ * Signature: (LSQLite/Backup;LSQLite/Database;Ljava/lang/String;LSQLite/Database;Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_SQLite_Database__1backup
+  (JNIEnv *, jclass, jobject, jobject, jstring, jobject, jstring);
+
+/*
+ * Class:     SQLite_Database
+ * Method:    _profile
+ * Signature: (LSQLite/Profile;)V
+ */
+JNIEXPORT void JNICALL Java_SQLite_Database__1profile
+  (JNIEnv *, jobject, jobject);
+
+/*
+ * Class:     SQLite_Database
+ * Method:    _status
+ * Signature: (I[IZ)I
+ */
+JNIEXPORT jint JNICALL Java_SQLite_Database__1status
+  (JNIEnv *, jclass, jint, jintArray, jboolean);
+
+/*
+ * Class:     SQLite_Database
+ * Method:    _db_status
+ * Signature: (I[IZ)I
+ */
+JNIEXPORT jint JNICALL Java_SQLite_Database__1db_1status
+  (JNIEnv *, jobject, jint, jintArray, jboolean);
+
+/*
+ * Class:     SQLite_Database
  * Method:    is3
  * Signature: ()Z
  */
@@ -230,6 +270,30 @@ JNIEXPORT void JNICALL Java_SQLite_Database__1open_1blob
  */
 JNIEXPORT void JNICALL Java_SQLite_Database__1progress_1handler
   (JNIEnv *, jobject, jint, jobject);
+
+/*
+ * Class:     SQLite_Database
+ * Method:    _key
+ * Signature: ([B)V
+ */
+JNIEXPORT void JNICALL Java_SQLite_Database__1key
+  (JNIEnv *, jobject, jbyteArray);
+
+/*
+ * Class:     SQLite_Database
+ * Method:    _rekey
+ * Signature: ([B)V
+ */
+JNIEXPORT void JNICALL Java_SQLite_Database__1rekey
+  (JNIEnv *, jobject, jbyteArray);
+
+/*
+ * Class:     SQLite_Database
+ * Method:    _enable_shared_cache
+ * Signature: (Z)Z
+ */
+JNIEXPORT jboolean JNICALL Java_SQLite_Database__1enable_1shared_1cache
+  (JNIEnv *, jclass, jboolean);
 
 /*
  * Class:     SQLite_Database
@@ -578,11 +642,27 @@ JNIEXPORT jstring JNICALL Java_SQLite_Stmt_column_1decltype
 
 /*
  * Class:     SQLite_Stmt
+ * Method:    column_name
+ * Signature: (I)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_SQLite_Stmt_column_1name
+  (JNIEnv *, jobject, jint);
+
+/*
+ * Class:     SQLite_Stmt
  * Method:    column_origin_name
  * Signature: (I)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_SQLite_Stmt_column_1origin_1name
   (JNIEnv *, jobject, jint);
+
+/*
+ * Class:     SQLite_Stmt
+ * Method:    status
+ * Signature: (IZ)I
+ */
+JNIEXPORT jint JNICALL Java_SQLite_Stmt_status
+  (JNIEnv *, jobject, jint, jboolean);
 
 /*
  * Class:     SQLite_Stmt
