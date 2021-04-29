@@ -5136,6 +5136,11 @@ Java_SQLite_Database_internal_1init(JNIEnv *env, jclass cls)
 
 	C_java_lang_String = (*env)->NewGlobalRef(env, jls);
     }
+    while (C_SQLite_Database == 0) {
+        jclass jls = (*env)->FindClass(env, "SQLite/Database");
+        
+        C_SQLite_Database = (*env)->NewGlobalRef(env, jls);
+    }
 #endif
     F_SQLite_Database_handle =
 	(*env)->GetFieldID(env, cls, "handle", "J");
