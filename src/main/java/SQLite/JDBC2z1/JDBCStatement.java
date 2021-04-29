@@ -1,4 +1,4 @@
-package SQLite.JDBC2z;
+package SQLite.JDBC2z1;
 
 import java.sql.BatchUpdateException;
 import java.sql.Connection;
@@ -367,6 +367,16 @@ public class JDBCStatement implements java.sql.Statement {
     @Override
     public boolean isWrapperFor(java.lang.Class iface) throws SQLException {
 	return false;
+    }
+
+    @Override
+    public void closeOnCompletion() throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public boolean isCloseOnCompletion() throws SQLException {
+	throw new SQLFeatureNotSupportedException();
     }
 
 }

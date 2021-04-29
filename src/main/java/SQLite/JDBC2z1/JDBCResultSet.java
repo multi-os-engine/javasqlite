@@ -1,4 +1,4 @@
-package SQLite.JDBC2z;
+package SQLite.JDBC2z1;
 
 import java.math.BigDecimal;
 import java.sql.NClob;
@@ -1797,6 +1797,18 @@ public class JDBCResultSet implements java.sql.ResultSet {
     @Override
     public boolean isWrapperFor(java.lang.Class iface) throws SQLException {
 	return false;
+    }
+
+    @Override
+    public <T> T getObject(int colIndex, java.lang.Class<T> type)
+	throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public <T> T getObject(String colName, java.lang.Class<T> type)
+	throws SQLException {
+	throw new SQLFeatureNotSupportedException();
     }
 
 }

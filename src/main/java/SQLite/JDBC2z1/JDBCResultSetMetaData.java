@@ -1,4 +1,4 @@
-package SQLite.JDBC2z;
+package SQLite.JDBC2z1;
 
 import java.sql.SQLException;
 import java.sql.Types;

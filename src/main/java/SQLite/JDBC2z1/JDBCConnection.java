@@ -1,4 +1,4 @@
-package SQLite.JDBC2z;
+package SQLite.JDBC2z1;
 
 import java.sql.Array;
 import java.sql.Blob;
@@ -17,6 +17,7 @@ import java.sql.Savepoint;
 import java.sql.Statement;
 import java.sql.Struct;
 import java.util.Properties;
+import java.util.concurrent.Executor;
 
 public class JDBCConnection
     implements java.sql.Connection, SQLite.BusyHandler {
@@ -579,6 +580,31 @@ public class JDBCConnection
     @Override
     public boolean isWrapperFor(java.lang.Class iface) throws SQLException {
 	return false;
+    }
+
+    @Override
+    public void setNetworkTimeout(Executor ex, int ms) throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public int getNetworkTimeout() throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public void abort(Executor ex) throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public void setSchema(String schema) throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public String getSchema() throws SQLException {
+	throw new SQLFeatureNotSupportedException();
     }
 
 }

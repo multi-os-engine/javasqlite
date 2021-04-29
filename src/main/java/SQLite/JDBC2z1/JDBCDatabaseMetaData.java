@@ -1,10 +1,11 @@
-package SQLite.JDBC2z;
+package SQLite.JDBC2z1;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.RowIdLifetime;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.sql.Types;
 import java.util.Hashtable;
 
@@ -1864,4 +1865,14 @@ public class JDBCDatabaseMetaData implements DatabaseMetaData {
 	return false;
     }
 
+    @Override
+    public ResultSet getPseudoColumns(String cat, String schema, String tab,
+				      String col) throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
+
+    @Override
+    public boolean generatedKeyAlwaysReturned() throws SQLException {
+	throw new SQLFeatureNotSupportedException();
+    }
 }
