@@ -1,7 +1,5 @@
 package SQLite;
 
-import org.moe.svm.anns.JNI;
-
 /**
  * Callback interface for SQLite's query results.
  * <BR><BR>
@@ -45,7 +43,6 @@ public interface Callback {
      * @param coldata string array holding the column names
      */
 
-    @JNI
     public void columns(String coldata[]);
 
     /**
@@ -56,7 +53,6 @@ public interface Callback {
      * @param types string array holding column types
      */
 
-    @JNI
     public void types(String types[]);
 
     /**
@@ -69,6 +65,5 @@ public interface Callback {
      * @return true to abort
      */
 
-    @JNI
     public boolean newrow(String rowdata[]);
 }

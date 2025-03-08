@@ -1,7 +1,5 @@
 package SQLite;
 
-import org.moe.svm.anns.JNI;
-
 /**
  * Class wrapping an SQLite backup object.
  */
@@ -12,7 +10,6 @@ public class Backup {
      * Internal handle for the native SQLite API.
      */
 
-    @JNI
     protected long handle = 0;
 
     /**

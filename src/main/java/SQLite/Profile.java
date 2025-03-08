@@ -1,7 +1,5 @@
 package SQLite;
 
-import org.moe.svm.anns.JNI;
-
 /**
  * Callback interface for SQLite's profile function.
  */
@@ -16,7 +14,6 @@ public interface Profile {
      * @param est  estimated execution time in milliseconds.
      */
 
-    @JNI
     public void profile(String stmt, long est);
 }
 
